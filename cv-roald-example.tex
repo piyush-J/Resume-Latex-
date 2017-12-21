@@ -1,0 +1,120 @@
+% !TeX program = xelatex
+% Run with XeLaTeX
+% You can change the base color of this cv by altering the RGB values of \definecolor{maincolor}{RGB}{102, 204, 51} in class file:  cv-roald.cls. It will automatically define a darker and lighter shade of this color. The darker shade is used for the background of the header, the lighter for the contact details in the header and the maincolor is used for the titles. 
+
+\let\olditem\item
+\renewcommand{\item}{%to increase line spacing between bullets
+\olditem\vspace{3pt}} 
+
+\documentclass[]{cv-roald}
+\usepackage{marvosym}
+\begin{document}
+\pagestyle{empty} %to remove the page numbers
+
+%\usepackage[margin=1in,footskip=0.25in]{geometry}
+\newgeometry{left=1in,right=1in,top=0.6in,bottom=0.6in}
+
+% This is the header of the first page, which contains your name and contact details. 
+% \sep inserts a | between items. 
+% You can use FontAwesome icons and use \FAspace after a font awesome icon to insert a predefined horizontal space after a font awesome icon icon.
+\header{Piyush}{Jha}{\faMobile \hspace{\FAspace} +91 876 960 6179 \sep \faEnvelope \hspace{\FAspace} piyushnit15@gmail.com \sep \faMapMarker \hspace{\FAspace} Kharagpur, India}{\faLinkedinSquare \hspace{\FAspace} piyush-J \sep \Mundus \hspace{\FAspace} piyush.codecx.in \sep \faGithub \hspace{\FAspace} piyush-J}
+\\
+\\
+\\
+\textit{A machine learning and computer vision enthusiast with experience in embedded systems and wireless sensor node based communication system}
+
+\section*{Education}
+% Use tabularcv environment to make a two column environment, left one for dates, right one for details of your education for example. 
+% You can use the command \worktitle{Study name/Job title}{Location}.
+% You can use the environment tabitemize to make a bulletpoint list inside the tabularcv environment.
+\begin{tabularcv}
+    2015-Present   &   \worktitle{B.Tech. (ECE)}{Malaviya National Institute of Technology (MNIT) Jaipur, 8.9/10 (Up to 4\textsuperscript{th} Semester)}
+                    \\[\vspacepar] % Start new row with this
+    May 2015   &   \worktitle{Intermediate}{Central Board of Secondary Education (CBSE), New Delhi, 96.4\%}
+                    \\[\vspacepar] % Start new row with this
+    May 2013   &   \worktitle{Matriculation}{Central Board of Secondary Education (CBSE), New Delhi, 10/10}
+\end{tabularcv}
+
+\section*{Publication}
+
+Gaurav Bhatt, \textbf{Piyush Jha} and Balasubramanian Raman (2017). Common representation learning using step-based correlation multi-modal CNN. Accepted for publication in the 4\textsuperscript{th} Asian Conference on Pattern Recognition (ACPR 2017), 26-29 November 2017, Nanjing, China.
+
+\section*{Internships}
+\begin{tabularcv}
+        May 17-July 17:   &   \worktitle{IIT Roorkee}{Under the supervision of Dr. R. Balasubramanian, Associate Professor, Department of Computer Science and Engineering.}
+                    \\[\vspacepar] % Start new row with this
+        May 16-July 16:   &   \worktitle{IIT Kharagpur}{Under the supervision of Dr. Sudip Misra, Associate Professor, Department of Computer Science and Engineering.}
+\end{tabularcv}   
+
+\section*{Key Projects}
+\begin{tabularcv}
+    \textbf{June 2017}        &   \textbf{Correlation Convolution Neural Network for Reconstruction of Cropped Images}
+\begin{itemize}[leftmargin=*,nosep,topsep=0pt, label={\Large\textbullet}]
+\item A novel step-based correlation multi-modal CNN (CorrMCNN) model was proposed which reconstructs one view of the data given the other.
+\item The interaction between the representations is increased at each hidden layer.
+\item Through extensive experiments, it was found that the proposed model achieves a better performance than the current state-of-the-art techniques on joint common representation learning and transfer learning. 
+\end{itemize}
+\\[\vspacepar] % Start new row with this
+    \textbf{March 2017}        &   \textbf{Low-Cost Interactive Smartboard} \emph{(Ongoing)}
+\begin{itemize}[leftmargin=*,nosep, topsep=0pt, label={\Large\textbullet}]
+\item A prototype of a low-cost interactive Smartboard was designed which allows us to convert any display unit (e.g., a monitor, a projection screen, etc.) into a Smartboard.
+\item With the help of a Smart Pen and the executable file we can setup an interactive classroom. 
+\item This idea is being currently extended to finger tracking and low-cost head tracking. 
+\end{itemize}
+
+\\[\vspacepar] % Start new row with this
+    \textbf{February 2017}        &   \textbf{Elbow Rehabilitation Using Extraction of EMG Signals} \emph{(Ongoing)}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt, label={\Large\textbullet}]
+\item EMG Signals are extracted using Advancer Technologies Muscle Sensor V3
+with I2C ADS1115 with the front end made in Processing.
+\item Useful features are generated from the extracted data by applying signal processing using Python.
+\item A prosthetic system is trained using supervised learning to judge the intent of the person's muscle movement. 
+\end{itemize}
+\end{tabularcv}
+\\
+\\
+\begin{tabularcv}
+%\\[\vspacepar] % Start new row with this
+    \textbf{January 2017}        &   \textbf{Prevention of Drunken Driving by Control System Analysis and Motor Skills}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt, label={\Large\textbullet}]
+\item The project relates to the field of sobriety tests while driving.
+\item It is a preventive technique for drunk-driving based on a sequential test case scenario. 
+\item Its corresponding algorithmic solution has been conceptualized along with three working and two proposed tests for testing the driver's working motor skills. 
+\end{itemize}
+\\[\vspacepar] % Start new row with this
+    \textbf{June 2016}        &   \textbf{Encrypted Laser Based Communication System}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,label={\Large\textbullet}]
+\item A secure laser based communication system has been developed to transmit messages from one node to another. 
+\item A minimum bit-error rate is ensured, irrespective of the channel of communication.
+\end{itemize}
+\\[\vspacepar] % Start new row with this
+    \textbf{June 2016}        &   \textbf{Wireless Activation of Sensor Nodes}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,label={\Large\textbullet}]
+\item A mobile master node architecture with burst power node activation was proposed and developed to overcome the shortcomings of traditional WSN (Wireless Sensor Node) architecture. 
+\item It is cost-effective, consuming more than 100 times fewer units of electricity in a week’s run, as compared to the traditional architecture. 
+\end{itemize}
+\\[\vspacepar]
+\textbf{Other Projects} \\[\vspacepar] % Start new row with this
+April 2016        &   \ \ \ \ Game Controller Driven Semi-autonomous Robot
+\\[\vspacepar]
+April 2016        & \ \ \ \ Line Seeking Autonomous Robot
+\\[\vspacepar]
+December 2015 &  \ \ \ \ Staircase Traversing Manual Robot
+\end{tabularcv}
+
+\section*{Software Skill}
+\begin{tabular}{ @{} >{}l @{\hspace{6ex}} l }
+Programming Languages & Python, C, C++, MATLAB, HTML, SQL \\[\vspacepar]
+General Software       &   MS-Office, AutoCAD, Latex
+\end{tabular}
+
+\section*{Scholastic Achievements }
+\begin{tabular}{ @{} >{}l @{\hspace{4ex}} l }
+    Qualified & HackRice 7 (Hackathon organized by Rice University) \emph{September 22-24 2017, Houston, Texas, USA} \\[\vspacepar]
+    Winner			&	Salvator (Semi-autonomous Robotics Event) \emph{8-10 April 2016, Blitzschlag, MNIT, Jaipur} \\[\vspacepar]
+    Finalist			&	Frodo Hockey (Manual Robotics Event) \emph{8-10 April 2016, Blitzschlag, MNIT, Jaipur} \\[\vspacepar]
+    Finalist        &   Summit (Manual Robotics Event) \emph{21-24 January 2016, Kshitij, IIT Kharagpur} \\[\vspacepar]
+    Active Member & ZINE (Research and Robotics Group) \emph{August 2017-Present, MNIT, Jaipur}
+\end{tabular}
+
+\end{document}
